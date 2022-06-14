@@ -11,6 +11,8 @@ class MattsList<T>
 
     public void Add(T item)
     {
+        // TODO: Understand how badly this performs as we are creating a new array every call to Add()
+        //       How does IList<> do this in a performant way?  Is it backed by an array or something else?
         array = array.Append(item).ToArray<T>();
     }
 
