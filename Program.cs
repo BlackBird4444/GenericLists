@@ -16,4 +16,6 @@ hero2.Secondary = "Healer";
 
 list.Add(hero1);
 list.Add(hero2);
+
 Console.WriteLine(list.ToString());
+Console.WriteLine(list.Size());
