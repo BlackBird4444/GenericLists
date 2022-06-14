@@ -11,10 +11,7 @@ class MattsList<T>
 
     public void Add(T item)
     {
-        // TODO: Figure out how to properly dispose of array (value type)
-        var newArray = array.Append(item).ToArray<T>();
-        array = newArray;
-        newArray = null;
+        array = array.Append(item).ToArray<T>();
     }
 
     public void Set(T item, int index)
@@ -24,9 +21,8 @@ class MattsList<T>
 
     public int Size()
     {
-        return array.Count<T>();
+        return array.Length;
     }
-
 
     // TODO: See if there is a faster way than using Reflection
     public override string ToString()
