@@ -21,7 +21,6 @@ class MattsList<T>
 
     public int Size()
     {
-        Console.WriteLine(array.Length);
         return array.Length;
     }
 
