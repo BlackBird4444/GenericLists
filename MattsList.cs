@@ -14,6 +14,17 @@ class MattsList<T>
         array = array.Append(item).ToArray<T>();
     }
 
+    public void Set(T item, int index)
+    {
+        array[index] = item;
+    }
+
+    public int Size()
+    {
+        Console.WriteLine(array.Length);
+        return array.Length;
+    }
+
     // TODO: See if there is a faster way than using Reflection
     public override string ToString()
     {
@@ -33,7 +44,6 @@ class MattsList<T>
                 output.Append(property.Name + ":" + property.GetValue(item) + ",");
             }
         }
-
         return output.ToString();
     }
 }
