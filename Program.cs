@@ -15,11 +15,11 @@ hero2.Role = "Support";
 hero2.Secondary = "Healer";
 
 var hero3 = new Hero();
-hero1.Id = "Echo";
-hero1.Image = "lkdsajflkajflksajdflkjdsalkfjsdlf";
-hero1.Name = "Echo";
-hero1.Description = "Echo is the annoying iPhone that flies around.";
-hero1.Role = "DPS";
+hero3.Id = "Echo";
+hero3.Image = "lkdsajflkajflksajdflkjdsalkfjsdlf";
+hero3.Name = "Echo";
+hero3.Description = "Echo is the annoying iPhone that flies around.";
+hero3.Role = "DPS";
 
 list.Add(hero1);
 list.Add(hero2);
