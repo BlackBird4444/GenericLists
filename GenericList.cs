@@ -18,10 +18,16 @@ class GenericList<T>
 
     public void Remove(T item)
     {
-        var itemToRemove = array.First<T>(x =>
+        var itemToRemove = array.FirstOrDefault<T>(x =>
         {
             return x.Equals(item);
         });
+        if (itemToRemove == null)
+        {
+            return;
+        }
+
+        // TODO: Is there a better way than enumerating?
         var newArray = Array.Empty<T>();
         foreach (var thing in array)
         {
