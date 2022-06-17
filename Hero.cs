@@ -1,4 +1,4 @@
-class Hero
+class Hero : object
 {
     public string? Id { get; set; }
     public string? Name { get; set; }
@@ -6,4 +6,6 @@ class Hero
     public string? Role { get; set; }
     public string? Secondary { get; set; }
     public string? Image { get; set; }
+
+    // START HERE: Override Equals()
 }
