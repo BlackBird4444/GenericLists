@@ -11,6 +11,10 @@ class GenericList<T>
 
     public void Add(T item)
     {
+        if (item == null)
+        {
+            throw new ArgumentException("GenericList does not allow for null values to be added.");
+        }
         // TODO: Understand how badly this performs as we are creating a new array every call to Add()
         //       How does IList<> do this in a performant way?  Is it backed by an array or something else?
         array = array.Append(item).ToArray<T>();
@@ -18,10 +22,16 @@ class GenericList<T>
 
     public void Remove(T item)
     {
+        if (item == null)
+        {
+            throw new ArgumentException("GenericList does not allow for null values to be added.");
+        }
+
         var itemToRemove = array.FirstOrDefault<T>(x =>
         {
-            return x.Equals(item);
+            return x!.Equals(item);
         });
+
         if (itemToRemove == null)
         {
             return;
