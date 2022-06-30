@@ -8,4 +8,30 @@ class Hero : object
     public string? Image { get; set; }
 
     // START HERE: Override Equals()
+
+    public override bool Equals(object? obj)
+    {
+        if (obj == null)
+        {
+            throw new NullReferenceException();
+        }
+
+        Hero tempObj = null;
+
+        try
+        {
+            tempObj = (Hero)obj;
+        }
+        catch
+        {
+            return false;
+        }
+
+        if (tempObj.Id == this.Id)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }

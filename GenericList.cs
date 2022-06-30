@@ -49,11 +49,6 @@ class GenericList<T>
         array = newArray;
     }
 
-    public void Set(T item, int index)
-    {
-        array[index] = item;
-    }
-
     public int Size()
     {
         return array.Length;
