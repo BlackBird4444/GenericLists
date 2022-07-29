@@ -41,7 +41,7 @@ class GenericList<T>
         var newArray = Array.Empty<T>();
         foreach (var thing in array)
         {
-            if (!thing.Equals(itemToRemove))
+            if (thing != null && !thing.Equals(itemToRemove))
             {
                 newArray = newArray.Append(thing).ToArray<T>();
             }

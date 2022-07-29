@@ -1,13 +1,22 @@
 class Hero : object
 {
-    public string? Id { get; set; }
+    public string Id { get; set; }
     public string? Name { get; set; }
     public string? Description { get; set; }
     public string? Role { get; set; }
     public string? Secondary { get; set; }
     public string? Image { get; set; }
 
-    // START HERE: Override Equals()
+    public Hero(string id)
+    {
+        if (string.IsNullOrEmpty(id))
+        {
+            throw new NullReferenceException();
+        }   
+        //TODO: what type of method is IsNullOrEmpty? 
+        this.Id = id;
+        
+    }
 
     public override bool Equals(object? obj)
     {
@@ -16,7 +25,7 @@ class Hero : object
             throw new NullReferenceException();
         }
 
-        Hero tempObj = null;
+        Hero? tempObj = null;
 
         try
         {
@@ -33,5 +42,10 @@ class Hero : object
         }
 
         return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return Int32.Parse(this.Id);
     }
 }
