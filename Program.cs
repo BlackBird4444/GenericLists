@@ -20,8 +20,8 @@ hero3.Role = "DPS";
 
 list.Add(hero1);
 list.Add(hero2);
+
 list.Remove(hero3);
 
 Console.WriteLine(list.ToString());
 Console.WriteLine(list.Size());
-
